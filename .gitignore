@@ -194,8 +194,8 @@ venv.bak/
 .venv/
 
 Wavs/**
-Noises/**
-Testing/**
-Training/**
+**/Noises
+**/Testing
+**/Training
 
 # End of https://www.gitignore.io/api/git,linux,python,pycharm
