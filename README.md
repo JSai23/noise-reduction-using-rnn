@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Noise Reduction using RNNs with Tensorflow
 Implements python programs to train and test a Recurrent Neural Network with Tensorflow
 
@@ -14,3 +15,6 @@ The program contains 4 scripts, which are run in the following order.
 2. 'CreateTest.py' - Separates 1000 random files from the Training directory and moves them to the test folder for later testing.
 3. 'LSTM_Train.py' - Begins to train an LSTM network with the files in the training folder, and saves the tensorflow graphs in the Testing directories.
 4. 'LSTM_Testing.py' - Once testing is complete, the graph is saved as 'FINAL' in the '/TF_Checkpoints/' directory, and invoked by this script. Files in the testing directory are now fed into the graph to produce outputs.
+=======
+# noise-reduction-using-rnn
+>>>>>>> 794783f1bcd9ae0f5cce00b60ba452465428d629
