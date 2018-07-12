@@ -1,6 +1,6 @@
-model_checkpoint_path: "ssep_model-9"
-all_model_checkpoint_paths: "ssep_model-5"
+model_checkpoint_path: "FINAL"
 all_model_checkpoint_paths: "ssep_model-6"
 all_model_checkpoint_paths: "ssep_model-7"
 all_model_checkpoint_paths: "ssep_model-8"
 all_model_checkpoint_paths: "ssep_model-9"
+all_model_checkpoint_paths: "FINAL"

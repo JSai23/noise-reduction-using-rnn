@@ -45,19 +45,20 @@ def sequentialized_spectrum(batch, maximum_length):
         # Run a loop long enough to break up all the data in the file into chunks of sequence_size
         print '\n This is run total'
         print run_total
-        for step in range(int(run_total) - 1):
-            print '\n Start of all Values'
-            print '\n this is the step'
-            print step
+        for step in range(int(run_total)):
             begin_point = step * sequence_length
+            print '\n Mag Shape [1]'
+            print int(Mag.shape[1])
             end_point = begin_point + sequence_length
+            print '\n Mag.shape[1] value'
+            print int(Mag.shape[1])
+            if end_point > Mag.shape[1]:
+                end_point = Mag.shape[1]
             print '\n Values for debug'
             print '\n Begin Point'
             print begin_point
             print '\n End Point'
             print end_point
-            print '\n Mag Array'
-            print np.array_str(Mag)
             print '\n Mag Array Shape'
             print Mag.shape
             print 'This is end of all Values'
@@ -109,9 +110,9 @@ stft_size = 1024
 
 # RNN Specs
 sequence_length = 100
-batch_size = 10
+batch_size = 100
 learning_rate = 0.1
-epochs = 300
+epochs = 23
 # number_of_layers = 3
 
 # Tensorflow vars + Graph and LSTM Params
@@ -203,7 +204,6 @@ for idx in range(run_epochs):
         i = random.randint(0, len(file_repository) - 1)
         files_vec.append(file_repository[i])
         clean_files_fin_vec.append(clean_repository[i])
-    print '\n this is clean file ve' + str(clean_files_fin_vec)
     stft_batch = []
     clean_voice_batch = []
 
@@ -218,7 +218,6 @@ for idx in range(run_epochs):
             max_time_steps = stft_batch.shape[1]
     else:
             max_time_steps = clean_voice_batch.shape[1]
-    print ' \n this is max_time_steps: ' + str(max_time_steps)
     for time_seq in range(max_time_steps):
         feed_dict = {
             input_data: stft_batch[:, time_seq, :, :],
